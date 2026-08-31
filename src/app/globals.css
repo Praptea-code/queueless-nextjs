@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 4%;
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 4% 46%;
+    --card: 0 0% 100%;
+    --border: 240 6% 90%;
+    --brand: 190 90% 38%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  /* Light-gray dotted background texture for the landing theme */
+  .bg-dots {
+    background-image: radial-gradient(
+      circle,
+      rgba(15, 23, 42, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+}
